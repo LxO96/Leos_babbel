@@ -1,0 +1,167 @@
+:root {
+  --navy: #284f72;
+  --navy-deep: #162c3d;
+  --cream: #ebebd3;
+  --cream-dim: #b7b6a7;
+  --yellow: #f4d35e;
+  --peach: #ee964b;
+  --orange: #f25c05;
+  --rust: #bc4206;
+  --display: "Playfair Display", "Bodoni MT", Didot, Georgia, serif;
+  --body: "Crimson Pro", "Times New Roman", Times, serif;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--navy); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--navy);
+  color: var(--cream);
+  font: 400 1.25rem/1.5 var(--body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* The faint wall of words behind everything, as in the definition panel. */
+.texture {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  color: var(--navy-deep);
+  opacity: 0.35;
+  font: 400 0.95rem/1.15 var(--body);
+  word-spacing: 0.15em;
+  text-align: justify;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 16px 3rem;
+}
+
+a { color: var(--yellow); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--peach); }
+
+/* Header */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.25rem 0;
+}
+.top img { width: 3rem; height: 3rem; display: block; }
+.top .name {
+  font: 700 1.3rem/1 var(--display);
+  color: var(--cream);
+  text-decoration: none;
+  margin-right: auto;
+  white-space: nowrap;
+}
+.top nav { display: flex; gap: 1.1rem; font-size: 1.1rem; }
+.top nav a { color: var(--cream); text-decoration: none; }
+.top nav a:hover { color: var(--yellow); }
+
+/* The dictionary entry */
+.entry { padding: 2.5rem 0 1rem; }
+.word {
+  margin: 0;
+  font: 900 clamp(4rem, 17vw, 8.5rem)/0.95 var(--display);
+  letter-spacing: -0.01em;
+  color: var(--cream);
+  text-shadow: 0.05em 0.04em 0 var(--yellow), 0.1em 0.08em 0 var(--orange);
+}
+.pron {
+  margin: 0.6rem 0 1.8rem;
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+}
+.pron em { font-style: normal; margin-left: 0.5em; font-size: 0.85em; }
+.defs { margin: 0; padding: 0 0 0 1.6rem; font-size: clamp(1.25rem, 3.6vw, 1.55rem); }
+.defs li { padding-left: 0.3rem; margin-bottom: 0.5rem; }
+.defs li::marker { font-weight: 700; }
+.defs .mine { color: var(--yellow); }
+
+/* Clouds, borrowed from the palette panel */
+.cloud { display: block; height: auto; }
+.cloud.right { margin: 1.5rem 0 1.5rem auto; width: min(18rem, 60%); }
+.cloud.left { margin: 2.5rem auto 0 0; width: min(13rem, 45%); }
+
+/* Sections */
+h2 {
+  font: 900 clamp(2.2rem, 7vw, 3rem)/1.1 var(--display);
+  margin: 2.5rem 0 1.2rem;
+  color: var(--cream);
+  text-shadow: 0.06em 0.05em 0 var(--yellow);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.5rem;
+  background: var(--navy-deep);
+  border-radius: 1.4rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--orange);
+}
+.app img { width: 5.5rem; height: 5.5rem; display: block; border-radius: 1.3rem; }
+.app h3 {
+  margin: 0 0 0.3rem;
+  font: 900 2rem/1.1 var(--display);
+  color: var(--orange);
+  text-shadow: -0.05em 0 0 var(--peach);
+}
+.app p { margin: 0 0 0.75rem; }
+.status {
+  display: inline-block;
+  padding: 0.1rem 0.8rem;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--navy-deep);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.links { list-style: none; padding: 0; margin: 0.9rem 0 0; display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: 1.1rem; }
+
+@media (max-width: 30rem) {
+  .app { grid-template-columns: 1fr; box-shadow: 0.35rem 0.35rem 0 var(--orange); }
+  .app img { width: 4.5rem; height: 4.5rem; }
+}
+
+.contact p { margin: 0; font-size: 1.35rem; }
+
+footer {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+footer img { width: 7.5rem; height: auto; }
+
+/* The privacy policy */
+.policy h1 {
+  font: 900 clamp(2.4rem, 8vw, 3.6rem)/1.05 var(--display);
+  margin: 2rem 0 0.4rem;
+  text-shadow: 0.05em 0.04em 0 var(--yellow), 0.1em 0.08em 0 var(--orange);
+}
+.policy .date { color: var(--cream-dim); margin: 0 0 2rem; }
+.policy h2 { font-size: clamp(1.6rem, 5vw, 2rem); margin: 2.2rem 0 0.6rem; }
+.policy p, .policy li { max-width: 40rem; }
+.policy ul { padding-left: 1.3rem; }
+.policy li { margin-bottom: 0.4rem; }
+.policy strong { color: var(--yellow); font-weight: 600; }
+.summary {
+  background: var(--navy-deep);
+  border-left: 0.4rem solid var(--orange);
+  border-radius: 0 1rem 1rem 0;
+  padding: 1rem 1.3rem;
+  margin: 0 0 1rem;
+}
+.summary p { margin: 0; }

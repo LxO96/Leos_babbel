@@ -1,0 +1,3 @@
+# Source artwork, kept out of the site
+*.svg
+!assets/**/*.svg
