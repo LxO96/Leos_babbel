@@ -54,16 +54,8 @@ a:hover { color: var(--peach); }
 /* Header */
 .top {
   display: flex;
-  align-items: center;
-  gap: 0.9rem;
+  justify-content: flex-end;
   padding: 1.25rem 0;
-}
-.top .name {
-  font: 700 1.3rem/1 var(--display);
-  color: var(--cream);
-  text-decoration: none;
-  margin-right: auto;
-  white-space: nowrap;
 }
 .top nav { display: flex; gap: 1.1rem; font-size: 1.1rem; }
 .top nav a { color: var(--cream); text-decoration: none; }
@@ -91,7 +83,6 @@ h2 {
   font: 900 clamp(2.2rem, 7vw, 3rem)/1.1 var(--display);
   margin: 2.5rem 0 1.2rem;
   color: var(--cream);
-  text-shadow: 0.06em 0.05em 0 var(--yellow);
 }
 
 .app {
@@ -108,8 +99,7 @@ h2 {
 .app h3 {
   margin: 0 0 0.3rem;
   font: 900 2rem/1.1 var(--display);
-  color: var(--orange);
-  text-shadow: -0.05em 0 0 var(--peach);
+  color: var(--cream);
 }
 .app p { margin: 0 0 0.75rem; }
 .status {
