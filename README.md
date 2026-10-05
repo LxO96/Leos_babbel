@@ -6,4 +6,5 @@ Plain HTML and CSS, served by GitHub Pages from `main` (no build step).
 
 - `index.html`: the home page
 - `wigglecam/privacy/`: Wigglecam's privacy policy (the URL given to Google Play)
-- `assets/`: styles, and the logo, clouds and signature taken from the Babbel artwork
+- `assets/`: styles, the LB logo (the favicon) and the signature, taken from the Babbel artwork
+- `assets/clouds/`: the palette clouds from the artwork, kept as a colour reference (not shown on the pages)
