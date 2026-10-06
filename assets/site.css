@@ -28,7 +28,12 @@ body {
 /* The faint wall of words behind everything, as in the definition panel. */
 .texture {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* The largest the window gets: on phones, with the address bar hidden. */
+  height: 100vh;
+  height: 100lvh;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
