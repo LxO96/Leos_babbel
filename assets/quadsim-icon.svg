@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"
+     role="img" aria-label="Quadsim">
+  <title>Quadsim</title>
+
+  <rect width="256" height="256" rx="56" fill="#12171E"/>
+
+  <g transform="translate(128 128) scale(0.94) translate(-128 -128)">
+    <g fill="#B9C4D0" opacity="0.26">
+      <circle cx="84" cy="84" r="34"/>
+      <circle cx="172" cy="84" r="34"/>
+      <circle cx="84" cy="172" r="34"/>
+      <circle cx="172" cy="172" r="34"/>
+    </g>
+    <g fill="none" stroke="#B9C4D0" stroke-width="7" opacity="0.95">
+      <circle cx="84" cy="84" r="34"/>
+      <circle cx="172" cy="84" r="34"/>
+      <circle cx="84" cy="172" r="34"/>
+      <circle cx="172" cy="172" r="34"/>
+    </g>
+    <g fill="none" stroke-width="18" stroke-linecap="round">
+      <g stroke="#F0993C">
+        <path d="M 108 108 L 84 84"/>
+        <path d="M 148 108 L 172 84"/>
+      </g>
+      <g stroke="#B9C4D0">
+        <path d="M 108 148 L 84 172"/>
+        <path d="M 148 148 L 172 172"/>
+      </g>
+    </g>
+
+    <g>
+      <circle cx="84" cy="84" r="10" fill="#F0993C"/>
+      <circle cx="172" cy="84" r="10" fill="#F0993C"/>
+      <circle cx="84" cy="172" r="10" fill="#B9C4D0"/>
+      <circle cx="172" cy="172" r="10" fill="#B9C4D0"/>
+    </g>
+
+    <rect x="104" y="104" width="48" height="48" rx="15" fill="#E3E8EE"/>
+  </g>
+</svg>
